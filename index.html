@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>alumni homecoming registration form</title>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">   
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap.min.js"></script>
+    
+</head> 
+
+<body>
+    <form class= "container">
+        <div id="ui">
+            <h1 class="titleHead">alumni homecoming registration form</h1>
+            <div class="form-row"> <!-- "form-row no-gutters" doesnt work -->
+                <div class="col-lg-2">
+                    <label for="lastName">last name</label>
+                    <input type="text" class="form-control" id="lastName">
+                </div>
+                
+                <div class="col-lg-4">
+                    <label for="lastName">first name</label>
+                    <input type="text" class="form-control" id="lastName">
+                </div>
+
+                <div class="col-lg-3">
+                    <label for="lastName">middle name</label>
+                    <input type="text" class="form-control" id="lastName">
+                </div>
+                    
+                <div class="col-lg-3 align-self-lg-end">
+                    <label for="batch">batch (year)</label>
+                    <select id="batch" class="custom-select form-control">
+                        <option selected>0000</option>
+                        <option value="1">69</option>
+                        <option value="2">420</option>
+                        <option value="3">1337</option>
+                    </select>
+                </div>    
+            </div>
+
+            <div class="row">
+                    <div class="col-lg-12">
+                        <button type="button" class="btn reg form-control" data-toggle="modal" data-target="#privacyNotice">register</button>
+                    </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="footer-copyright text-center py-3 text-muted">© 2019 UNIVERSITY OF THE EAST MANILA CCSS RESEARCH AND DEVELOPMENT UNIT</div>
+  
+    <!-- Modal -->
+    <div class="modal fade bd-modal-lg" id="privacyNotice" tabindex="-1" role="dialog" aria-labelledby="privacyDetails" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content ">
+            <div class="modal-header">
+            <h5 class="col-12 modal-title" id="privacyDetails">privacy notice</h5>
+            </div>
+            <div class="modal-body">
+                    <p class="text-justify priv">The event organizers collected information from you as participants for the purposes of registration and overall event management. By providing your information, you are giving your consent to us to use your information for the aforementioned purposes.</p>
+                    <p class="text-justify priv">After conclusion of the event and completion of all necessary reports, your personal data will be saved in secure files for future reference and networking activities. <b>If you do not wish to be contacted further after this event, kindly inform the organizers.</b></p>
+                    <p class="text-justify priv">Picture generated in this event may be posted in different social media platforms for the purpose of documenting the said event. <b>Should you have any reservations about this matter, please inform the organizers now.</b></p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+            <button type="submit" class="btn btn-danger">submit</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html
