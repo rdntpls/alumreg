@@ -8,14 +8,14 @@
     <link rel="stylesheet" type="text/css" href="style.css">   
     <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="bootstrap.min.js"></script>
-    
+    <script type="text/javascript" src="script.js"></script>
 </head> 
 
 <body>
     <form class= "container">
         <div id="ui">
             <h1 class="titleHead">alumni homecoming registration form</h1>
-            <div class="form-row"> <!-- "form-row no-gutters" doesnt work -->
+            <div class="form-row"> 
                 <div class="col-lg-2">
                     <label for="lastName">last name</label>
                     <input type="text" class="form-control" id="lastName">
@@ -33,16 +33,24 @@
                     
                 <div class="col-lg-3 align-self-lg-end">
                     <label for="batch">batch (year)</label>
-                    <select id="batch" class="custom-select form-control">
-                        <option selected>0000</option>
-                        <option value="1">69</option>
-                        <option value="2">420</option>
-                        <option value="3">1337</option>
-                    </select>
+                    <select id="selectElementId" class="custom-select form-control">
+                    </select>                                                               <!-- year picker -->
+                        <script> 
+                            var min = 1946,
+                            max = new Date(),
+                            select = document.getElementById('selectElementId');
+                            
+                            for (var i = max.getFullYear() - 1; i>=min; i--){
+                               var opt = document.createElement('option');
+                               opt.value = i;
+                               opt.innerHTML = i;
+                               select.appendChild(opt);
+                            }
+                            
+                        </script>
                 </div>    
             </div>
-
-            <div class="row">
+            <div class="row">                                                                  <!-- Register -->
                     <div class="col-lg-12">
                         <button type="button" class="btn reg form-control" data-toggle="modal" data-target="#privacyNotice">register</button>
                     </div>
@@ -52,7 +60,7 @@
 
     <div class="footer-copyright text-center py-3 text-muted">© 2019 UNIVERSITY OF THE EAST MANILA CCSS RESEARCH AND DEVELOPMENT UNIT</div>
   
-    <!-- Modal -->
+                                                                                                <!-- Modal -->
     <div class="modal fade bd-modal-lg" id="privacyNotice" tabindex="-1" role="dialog" aria-labelledby="privacyDetails" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content ">
@@ -65,8 +73,8 @@
                     <p class="text-justify priv">Picture generated in this event may be posted in different social media platforms for the purpose of documenting the said event. <b>Should you have any reservations about this matter, please inform the organizers now.</b></p>
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
-            <button type="submit" class="btn btn-danger">submit</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+            <button type="submit" class="btn btn-danger">proceed</button>
             </div>
         </div>
         </div>
